@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 	<title></title>
 </head>
 <body>
 	<h1>My fav food is Sushi</h1>
 	<p>it's just simply the best</p>
+
+	<ul>
+		{% for food in favfood %}
+		<li> {{food}} </li>
+		{% endfor %}
+	</ul>
+	<ul>
+	{% if opposite_day == True %}
+		<li>Eggplant</li>
+		<li>Sea Food</li>
+		{% endif %}
+	</ul>
 </body>
 </html>
